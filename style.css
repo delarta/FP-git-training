@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Media Query */
+.main {
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+}
+
+.repository {
+  background-color: #3398f6;
+  height: 100vh;
+  width: 25vw;
+}
+
+.activity {
+  background-color: #e7d06a;
+  height: 100vh;
+  width: 50vw;
+}
+
+.explore {
+  background-color: #b962cf;
+  height: 100vh;
+  width: 25vw;
+  transition: background-color 500ms ease-out, font-size 300ms ease-out;
+  font-size: 42px;
+}
+
+.explore:hover {
+  background-color: crimson;
+  font-size: 64px;
+}
+
+@media (max-width: 800px) {
+  .explore {
+    display: none;
+  }
+
+  .activity {
+    width: 75vw;
+  }
+}
+
+@media (max-width: 400px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .repository {
+    width: 100vw;
+  }
+
+  .activity {
+    width: 100vw;
+  }
+}
